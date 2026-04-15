@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #f4f7fb;
+      font-family: Arial, sans-serif;
+    }
+
+    #status {
+      position: fixed;
+      left: 12px;
+      bottom: 12px;
+      max-width: 85%;
+      padding: 8px 12px;
+      border-radius: 10px;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      font-size: 12px;
+      line-height: 1.35;
+      z-index: 10;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    canvas {
+      display: block;
+    }
+  </style>
+
+  <script src="https://unpkg.com/three@0.132.2/build/three.min.js"></script>
+  <script src="https://unpkg.com/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://unpkg.com/three@0.132.2/examples/js/loaders/GLTFLoader.js"></script>
+</head>
+<body>
+  <div id="status">Initializing...</div>
+
+  <script>
+    let scene;
+    let camera;
+    let renderer;
+    let controls;
+
+    let robotRoot = null;
+    let joints = [];
+    let targetAngles = [0, 0, 0, 0, 0, 0];
+
+    const jointNames = ['link_1', 'link_2', 'link_3', 'link_4', 'link_5', 'link_6'];
+    const jointAxis = ['z', 'x', 'x', 'z', 'x', 'z'];
+    const jointSign = [1, -1, -1, 1, 1, 1];
+
+    const statusEl = document.getElementById('status');
+
+    function log(message) {
+      console.log(message);
+      statusEl.textContent = String(message);
+      if (window.RobotViewer && window.RobotViewer.postMessage) {
+        window.RobotViewer.postMessage(String(message));
+      }
+    }
+
+    function degToRad(value) {
+      return value * Math.PI / 180;
+    }
+
+    function initScene() {
+      scene = new THREE.Scene();
+      scene.background = new THREE.Color(0xf4f7fb);
+
+      camera = new THREE.PerspectiveCamera(
+        45,
+        window.innerWidth / window.innerHeight,
+        0.01,
+        100
+      );
+      camera.position.set(1.2, 1.0, 1.4);
+
+      renderer = new THREE.WebGLRenderer({
+        antialias: true,
+        alpha: false,
+      });
+      renderer.setPixelRatio(window.devicePixelRatio || 1);
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      document.body.appendChild(renderer.domElement);
+
+      controls = new THREE.OrbitControls(camera, renderer.domElement);
+      controls.enableDamping = false;
+      controls.target.set(0, 0.35, 0);
+      controls.update();
+
+      const ambient = new THREE.AmbientLight(0xffffff, 1.6);
+      scene.add(ambient);
+
+      const keyLight = new THREE.DirectionalLight(0xffffff, 1.4);
+      keyLight.position.set(2, 3, 2);
+      scene.add(keyLight);
+
+      const fillLight = new THREE.DirectionalLight(0xffffff, 0.7);
+      fillLight.position.set(-2, 2, -1);
+      scene.add(fillLight);
+
+      const grid = new THREE.GridHelper(4, 20, 0xd0d7e2, 0xe6ebf2);
+      scene.add(grid);
+
+      window.addEventListener('resize', onResize);
+      onResize();
+    }
+
+    function onResize() {
+      if (!camera || !renderer) return;
+
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    }
+
+    function centerRobotModel() {
+      if (!robotRoot) return;
+
+      const box = new THREE.Box3().setFromObject(robotRoot);
+      const center = box.getCenter(new THREE.Vector3());
+      const size = box.getSize(new THREE.Vector3());
+
+      robotRoot.position.sub(center);
+      robotRoot.position.y += size.y * 0.5;
+
+      controls.target.set(0, size.y * 0.35, 0);
+      controls.update();
+    }
+
+    function applyRotation() {
+      if (!robotRoot) return;
+
+      for (let i = 0; i < 6; i++) {
+        const joint = joints[i];
+        if (!joint) continue;
+
+        const radians = degToRad(targetAngles[i]) * jointSign[i];
+
+        if (jointAxis[i] === 'x') joint.rotation.x = radians;
+        if (jointAxis[i] === 'y') joint.rotation.y = radians;
+        if (jointAxis[i] === 'z') joint.rotation.z = radians;
+      }
+    }
+
+    function animate() {
+      requestAnimationFrame(animate);
+      controls.update();
+      renderer.render(scene, camera);
+    }
+
+    window.updateRobot = function (payload) {
+      console.log('RECEIVED:', payload);
+
+      if (payload && payload.anglesDeg) {
+        for (let i = 0; i < 6; i++) {
+          targetAngles[i] = Number(payload.anglesDeg[i] || 0);
+        }
+        applyRotation();
+      }
+    };
+
+    window.setModelBase64 = function (base64Data) {
+      try {
+        log('Parsing model...');
+
+        const binary = atob(base64Data);
+        const len = binary.length;
+        const bytes = new Uint8Array(len);
+
+        for (let i = 0; i < len; i++) {
+          bytes[i] = binary.charCodeAt(i);
+        }
+
+        const loader = new THREE.GLTFLoader();
+
+        loader.parse(
+          bytes.buffer,
+          '',
+          function (gltf) {
+            if (robotRoot) {
+              scene.remove(robotRoot);
+            }
+
+            robotRoot = gltf.scene;
+            robotRoot.name = 'arctos_root';
+            scene.add(robotRoot);
+
+            joints = jointNames.map(function (name) {
+              return robotRoot.getObjectByName(name);
+            });
+
+            const missing = jointNames.filter(function (name, index) {
+              return !joints[index];
+            });
+
+            centerRobotModel();
+            applyRotation();
+
+            if (missing.length > 0) {
+              log('Model loaded, but missing:\n' + missing.join(', '));
+            } else {
+              log('model-loaded');
+            }
+          },
+          function (error) {
+            console.error('GLB parse error:', error);
+
+            let message = 'load-error';
+            if (error && error.message) {
+              message += '\n' + error.message;
+            } else {
+              message += '\nerror';
+            }
+
+            log(message);
+          }
+        );
+      } catch (error) {
+        console.error('Base64 decode error:', error);
+        log('base64-error\n' + error);
+      }
+    };
+
+    initScene();
+    animate();
+    log('ready');
+  </script>
+</body>
+</html>
