@@ -1,0 +1,13 @@
+{
+  "programs": [
+    {
+      "programId": "P1",
+      "programName": "Program 1",
+      "description": "Example production program entry used by scheduler",
+      "metadata": {
+        "robotFamily": "generic",
+        "version": 1
+      }
+    }
+  ]
+}

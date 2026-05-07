@@ -1,0 +1,8 @@
+apscheduler==3.10.4
+paho-mqtt==2.1.0
+pyserial==3.5
+python-dateutil==2.9.0.post0
+python-dotenv==1.0.1
+
+pytest>=8.0
+flake8>=7.0

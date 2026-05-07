@@ -1,0 +1,10 @@
+{
+  "trials": 200,
+  "success_count": 199,
+  "success_rate": 0.995,
+  "mqtt_latency_p50_ms": 39.637,
+  "mqtt_latency_p95_ms": 53.533,
+  "recovery_time_p95_ms": 615.607,
+  "duplicate_count": 12,
+  "telemetry_drop_count": 20
+}

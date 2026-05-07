@@ -1,0 +1,542 @@
+{
+  "req-1776214991069-5721": {
+    "payload": {
+      "requestId": "req-1776214991069-5721",
+      "robotCode": "RB001",
+      "schemaVersion": "1.0",
+      "action": "QUERY",
+      "accepted": true,
+      "code": "OK",
+      "message": "Schedule query accepted.",
+      "data": null,
+      "timestamp": "2026-04-15T01:03:12.165737Z"
+    },
+    "created_at": "2026-04-15T01:03:12.165737Z"
+  },
+  "req-1776221698311-4497": {
+    "payload": {
+      "requestId": "req-1776221698311-4497",
+      "robotCode": "RB001",
+      "schemaVersion": "1.0",
+      "action": "QUERY",
+      "accepted": true,
+      "code": "OK",
+      "message": "Schedule query accepted.",
+      "data": null,
+      "timestamp": "2026-04-15T02:54:58.718272Z"
+    },
+    "created_at": "2026-04-15T02:54:58.718272Z"
+  },
+  "req-1776221910351-1831": {
+    "payload": {
+      "requestId": "req-1776221910351-1831",
+      "robotCode": "RB001",
+      "schemaVersion": "1.0",
+      "action": "CREATE",
+      "accepted": true,
+      "code": "OK",
+      "message": "Schedule created successfully.",
+      "data": {
+        "scheduleId": "LOCAL-req-1776221910351-1831"
+      },
+      "timestamp": "2026-04-15T02:58:30.835601Z"
+    },
+    "created_at": "2026-04-15T02:58:30.835601Z"
+  },
+  "req-1776222057716-8701": {
+    "payload": {
+      "requestId": "req-1776222057716-8701",
+      "robotCode": "RB001",
+      "schemaVersion": "1.0",
+      "action": "QUERY",
+      "accepted": true,
+      "code": "OK",
+      "message": "Schedule query accepted.",
+      "data": null,
+      "timestamp": "2026-04-15T03:00:58.124109Z"
+    },
+    "created_at": "2026-04-15T03:00:58.124109Z"
+  },
+  "req-1776222088965-8213": {
+    "payload": {
+      "requestId": "req-1776222088965-8213",
+      "robotCode": "RB001",
+      "schemaVersion": "1.0",
+      "action": "CREATE",
+      "accepted": true,
+      "code": "OK",
+      "message": "Schedule created successfully.",
+      "data": {
+        "scheduleId": "LOCAL-req-1776222088965-8213"
+      },
+      "timestamp": "2026-04-15T03:01:29.371908Z"
+    },
+    "created_at": "2026-04-15T03:01:29.371908Z"
+  },
+  "req-1777985700629-2898": {
+    "payload": {
+      "requestId": "req-1777985700629-2898",
+      "robotCode": "RB001",
+      "schemaVersion": "1.1",
+      "action": "QUERY",
+      "accepted": false,
+      "code": "AUTH_FAILED",
+      "message": "Invalid operator token.",
+      "data": null,
+      "timestamp": "2026-05-05T13:26:06.608704Z"
+    },
+    "created_at": "2026-05-05T13:26:06.608704Z"
+  },
+  "req-1777985723370-8042": {
+    "payload": {
+      "requestId": "req-1777985723370-8042",
+      "robotCode": "RB001",
+      "schemaVersion": "1.1",
+      "accepted": false,
+      "code": "AUTH_FAILED",
+      "message": "Invalid operator token.",
+      "mode": "AUTO",
+      "requestedMode": "MANUAL",
+      "timestamp": "2026-05-05T13:26:06.611710Z"
+    },
+    "created_at": "2026-05-05T13:26:06.611710Z"
+  },
+  "req-1777985727582-4477": {
+    "payload": {
+      "requestId": "req-1777985727582-4477",
+      "robotCode": "RB001",
+      "schemaVersion": "1.1",
+      "accepted": false,
+      "code": "AUTH_FAILED",
+      "message": "Invalid operator token.",
+      "mode": "AUTO",
+      "requestedMode": "MANUAL",
+      "timestamp": "2026-05-05T13:26:06.613710Z"
+    },
+    "created_at": "2026-05-05T13:26:06.613710Z"
+  },
+  "req-1777985902456-5390": {
+    "payload": {
+      "requestId": "req-1777985902456-5390",
+      "robotCode": "RB001",
+      "schemaVersion": "1.1",
+      "accepted": false,
+      "code": "AUTH_FAILED",
+      "message": "Invalid operator token.",
+      "mode": "AUTO",
+      "requestedMode": "MANUAL",
+      "timestamp": "2026-05-05T13:26:06.616747Z"
+    },
+    "created_at": "2026-05-05T13:26:06.616747Z"
+  },
+  "req-1777985902646-9422": {
+    "payload": {
+      "requestId": "req-1777985902646-9422",
+      "robotCode": "RB001",
+      "schemaVersion": "1.1",
+      "accepted": false,
+      "code": "AUTH_FAILED",
+      "message": "Invalid operator token.",
+      "mode": "AUTO",
+      "requestedMode": "MANUAL",
+      "timestamp": "2026-05-05T13:26:06.619765Z"
+    },
+    "created_at": "2026-05-05T13:26:06.619765Z"
+  },
+  "req-1777985902769-6981": {
+    "payload": {
+      "requestId": "req-1777985902769-6981",
+      "robotCode": "RB001",
+      "schemaVersion": "1.1",
+      "accepted": false,
+      "code": "AUTH_FAILED",
+      "message": "Invalid operator token.",
+      "mode": "AUTO",
+      "requestedMode": "MANUAL",
+      "timestamp": "2026-05-05T13:26:06.624280Z"
+    },
+    "created_at": "2026-05-05T13:26:06.624280Z"
+  },
+  "req-1777985902918-6556": {
+    "payload": {
+      "requestId": "req-1777985902918-6556",
+      "robotCode": "RB001",
+      "schemaVersion": "1.1",
+      "accepted": false,
+      "code": "AUTH_FAILED",
+      "message": "Invalid operator token.",
+      "mode": "AUTO",
+      "requestedMode": "MANUAL",
+      "timestamp": "2026-05-05T13:26:06.628802Z"
+    },
+    "created_at": "2026-05-05T13:26:06.628802Z"
+  },
+  "req-1777985996322-12": {
+    "payload": {
+      "requestId": "req-1777985996322-12",
+      "robotCode": "RB001",
+      "schemaVersion": "1.1",
+      "action": "QUERY",
+      "accepted": false,
+      "code": "AUTH_FAILED",
+      "message": "Invalid operator token.",
+      "data": null,
+      "timestamp": "2026-05-05T13:26:06.631802Z"
+    },
+    "created_at": "2026-05-05T13:26:06.631802Z"
+  },
+  "req-1777985999503-646": {
+    "payload": {
+      "requestId": "req-1777985999503-646",
+      "robotCode": "RB001",
+      "schemaVersion": "1.1",
+      "accepted": false,
+      "code": "AUTH_FAILED",
+      "message": "Invalid operator token.",
+      "mode": "AUTO",
+      "requestedMode": "MANUAL",
+      "timestamp": "2026-05-05T13:26:06.634804Z"
+    },
+    "created_at": "2026-05-05T13:26:06.634804Z"
+  },
+  "req-1777986002313-1499": {
+    "payload": {
+      "requestId": "req-1777986002313-1499",
+      "robotCode": "RB001",
+      "schemaVersion": "1.1",
+      "accepted": false,
+      "code": "AUTH_FAILED",
+      "message": "Invalid operator token.",
+      "action": "START",
+      "data": {
+        "state": "IDLE",
+        "message": "Auto-pick is idle.",
+        "running": false
+      },
+      "timestamp": "2026-05-05T13:26:06.638320Z"
+    },
+    "created_at": "2026-05-05T13:26:06.638320Z"
+  },
+  "req-1777986636796-9629": {
+    "payload": {
+      "requestId": "req-1777986636796-9629",
+      "robotCode": "RB001",
+      "schemaVersion": "1.1",
+      "accepted": false,
+      "code": "AUTH_FAILED",
+      "message": "Invalid operator token.",
+      "mode": "AUTO",
+      "requestedMode": "MANUAL",
+      "timestamp": "2026-05-05T13:26:06.641833Z"
+    },
+    "created_at": "2026-05-05T13:26:06.641833Z"
+  },
+  "req-1777986806933-2391": {
+    "payload": {
+      "requestId": "req-1777986806933-2391",
+      "robotCode": "RB001",
+      "schemaVersion": "1.1",
+      "action": "QUERY",
+      "accepted": false,
+      "code": "AUTH_FAILED",
+      "message": "Invalid operator token.",
+      "data": null,
+      "timestamp": "2026-05-05T13:26:06.646341Z"
+    },
+    "created_at": "2026-05-05T13:26:06.646341Z"
+  },
+  "req-1777986912235-9989": {
+    "payload": {
+      "requestId": "req-1777986912235-9989",
+      "robotCode": "RB001",
+      "schemaVersion": "1.1",
+      "accepted": false,
+      "code": "AUTH_FAILED",
+      "message": "Invalid operator token.",
+      "action": "START",
+      "data": {
+        "state": "IDLE",
+        "message": "Auto-pick is idle.",
+        "running": false
+      },
+      "timestamp": "2026-05-05T13:26:06.650356Z"
+    },
+    "created_at": "2026-05-05T13:26:06.650356Z"
+  },
+  "req-1777986913992-459": {
+    "payload": {
+      "requestId": "req-1777986913992-459",
+      "robotCode": "RB001",
+      "schemaVersion": "1.1",
+      "accepted": false,
+      "code": "AUTH_FAILED",
+      "message": "Invalid operator token.",
+      "action": "START",
+      "data": {
+        "state": "IDLE",
+        "message": "Auto-pick is idle.",
+        "running": false
+      },
+      "timestamp": "2026-05-05T13:26:06.653355Z"
+    },
+    "created_at": "2026-05-05T13:26:06.653355Z"
+  },
+  "req-1777986915088-2870": {
+    "payload": {
+      "requestId": "req-1777986915088-2870",
+      "robotCode": "RB001",
+      "schemaVersion": "1.1",
+      "accepted": false,
+      "code": "AUTH_FAILED",
+      "message": "Invalid operator token.",
+      "action": "START",
+      "data": {
+        "state": "IDLE",
+        "message": "Auto-pick is idle.",
+        "running": false
+      },
+      "timestamp": "2026-05-05T13:26:06.656863Z"
+    },
+    "created_at": "2026-05-05T13:26:06.656863Z"
+  },
+  "req-1777986916218-7301": {
+    "payload": {
+      "requestId": "req-1777986916218-7301",
+      "robotCode": "RB001",
+      "schemaVersion": "1.1",
+      "accepted": false,
+      "code": "AUTH_FAILED",
+      "message": "Invalid operator token.",
+      "mode": "AUTO",
+      "requestedMode": "MANUAL",
+      "timestamp": "2026-05-05T13:26:06.659876Z"
+    },
+    "created_at": "2026-05-05T13:26:06.659876Z"
+  },
+  "req-1777986917151-6462": {
+    "payload": {
+      "requestId": "req-1777986917151-6462",
+      "robotCode": "RB001",
+      "schemaVersion": "1.1",
+      "accepted": false,
+      "code": "AUTH_FAILED",
+      "message": "Invalid operator token.",
+      "mode": "AUTO",
+      "requestedMode": "MANUAL",
+      "timestamp": "2026-05-05T13:26:06.663877Z"
+    },
+    "created_at": "2026-05-05T13:26:06.663877Z"
+  },
+  "req-1777986918095-4285": {
+    "payload": {
+      "requestId": "req-1777986918095-4285",
+      "robotCode": "RB001",
+      "schemaVersion": "1.1",
+      "accepted": false,
+      "code": "AUTH_FAILED",
+      "message": "Invalid operator token.",
+      "mode": "AUTO",
+      "requestedMode": "MANUAL",
+      "timestamp": "2026-05-05T13:26:06.668391Z"
+    },
+    "created_at": "2026-05-05T13:26:06.668391Z"
+  },
+  "req-1777987587471-7502": {
+    "payload": {
+      "requestId": "req-1777987587471-7502",
+      "robotCode": "RB001",
+      "schemaVersion": "1.1",
+      "accepted": false,
+      "code": "AUTH_FAILED",
+      "message": "Invalid operator token.",
+      "mode": "AUTO",
+      "requestedMode": "MANUAL",
+      "timestamp": "2026-05-05T13:26:28.420268Z"
+    },
+    "created_at": "2026-05-05T13:26:28.420268Z"
+  },
+  "req-1777987588323-560": {
+    "payload": {
+      "requestId": "req-1777987588323-560",
+      "robotCode": "RB001",
+      "schemaVersion": "1.1",
+      "accepted": false,
+      "code": "AUTH_FAILED",
+      "message": "Invalid operator token.",
+      "mode": "AUTO",
+      "requestedMode": "MANUAL",
+      "timestamp": "2026-05-05T13:26:29.270903Z"
+    },
+    "created_at": "2026-05-05T13:26:29.270903Z"
+  },
+  "req-1777987588492-4336": {
+    "payload": {
+      "requestId": "req-1777987588492-4336",
+      "robotCode": "RB001",
+      "schemaVersion": "1.1",
+      "accepted": false,
+      "code": "AUTH_FAILED",
+      "message": "Invalid operator token.",
+      "mode": "AUTO",
+      "requestedMode": "MANUAL",
+      "timestamp": "2026-05-05T13:26:29.444521Z"
+    },
+    "created_at": "2026-05-05T13:26:29.444521Z"
+  },
+  "req-1777987590176-5802": {
+    "payload": {
+      "requestId": "req-1777987590176-5802",
+      "robotCode": "RB001",
+      "schemaVersion": "1.1",
+      "accepted": false,
+      "code": "AUTH_FAILED",
+      "message": "Invalid operator token.",
+      "mode": "AUTO",
+      "requestedMode": "MANUAL",
+      "timestamp": "2026-05-05T13:26:31.124551Z"
+    },
+    "created_at": "2026-05-05T13:26:31.124551Z"
+  },
+  "req-1777987590333-7305": {
+    "payload": {
+      "requestId": "req-1777987590333-7305",
+      "robotCode": "RB001",
+      "schemaVersion": "1.1",
+      "accepted": false,
+      "code": "AUTH_FAILED",
+      "message": "Invalid operator token.",
+      "mode": "AUTO",
+      "requestedMode": "MANUAL",
+      "timestamp": "2026-05-05T13:26:31.289006Z"
+    },
+    "created_at": "2026-05-05T13:26:31.289006Z"
+  },
+  "req-1777987591069-9368": {
+    "payload": {
+      "requestId": "req-1777987591069-9368",
+      "robotCode": "RB001",
+      "schemaVersion": "1.1",
+      "accepted": false,
+      "code": "AUTH_FAILED",
+      "message": "Invalid operator token.",
+      "mode": "AUTO",
+      "requestedMode": "MANUAL",
+      "timestamp": "2026-05-05T13:26:32.015608Z"
+    },
+    "created_at": "2026-05-05T13:26:32.015608Z"
+  },
+  "req-1777987591251-9298": {
+    "payload": {
+      "requestId": "req-1777987591251-9298",
+      "robotCode": "RB001",
+      "schemaVersion": "1.1",
+      "accepted": false,
+      "code": "AUTH_FAILED",
+      "message": "Invalid operator token.",
+      "mode": "AUTO",
+      "requestedMode": "MANUAL",
+      "timestamp": "2026-05-05T13:26:32.205247Z"
+    },
+    "created_at": "2026-05-05T13:26:32.205247Z"
+  },
+  "req-1777987591391-634": {
+    "payload": {
+      "requestId": "req-1777987591391-634",
+      "robotCode": "RB001",
+      "schemaVersion": "1.1",
+      "accepted": false,
+      "code": "AUTH_FAILED",
+      "message": "Invalid operator token.",
+      "mode": "AUTO",
+      "requestedMode": "MANUAL",
+      "timestamp": "2026-05-05T13:26:32.355255Z"
+    },
+    "created_at": "2026-05-05T13:26:32.355255Z"
+  },
+  "req-1777987595057-507": {
+    "payload": {
+      "requestId": "req-1777987595057-507",
+      "robotCode": "RB001",
+      "schemaVersion": "1.1",
+      "accepted": false,
+      "code": "AUTH_FAILED",
+      "message": "Invalid operator token.",
+      "mode": "AUTO",
+      "requestedMode": "MANUAL",
+      "timestamp": "2026-05-05T13:26:36.002898Z"
+    },
+    "created_at": "2026-05-05T13:26:36.002898Z"
+  },
+  "req-1777987601428-3542": {
+    "payload": {
+      "requestId": "req-1777987601428-3542",
+      "robotCode": "RB001",
+      "schemaVersion": "1.1",
+      "accepted": false,
+      "code": "AUTH_FAILED",
+      "message": "Invalid operator token.",
+      "action": "START",
+      "data": {
+        "state": "IDLE",
+        "message": "Auto-pick is idle.",
+        "running": false
+      },
+      "timestamp": "2026-05-05T13:26:42.381691Z"
+    },
+    "created_at": "2026-05-05T13:26:42.381691Z"
+  },
+  "req-1777987602742-8863": {
+    "payload": {
+      "requestId": "req-1777987602742-8863",
+      "robotCode": "RB001",
+      "schemaVersion": "1.1",
+      "accepted": false,
+      "code": "AUTH_FAILED",
+      "message": "Invalid operator token.",
+      "action": "START",
+      "data": {
+        "state": "IDLE",
+        "message": "Auto-pick is idle.",
+        "running": false
+      },
+      "timestamp": "2026-05-05T13:26:43.694075Z"
+    },
+    "created_at": "2026-05-05T13:26:43.694075Z"
+  },
+  "req-1777987602899-81": {
+    "payload": {
+      "requestId": "req-1777987602899-81",
+      "robotCode": "RB001",
+      "schemaVersion": "1.1",
+      "accepted": false,
+      "code": "AUTH_FAILED",
+      "message": "Invalid operator token.",
+      "action": "START",
+      "data": {
+        "state": "IDLE",
+        "message": "Auto-pick is idle.",
+        "running": false
+      },
+      "timestamp": "2026-05-05T13:26:43.876397Z"
+    },
+    "created_at": "2026-05-05T13:26:43.876397Z"
+  },
+  "req-1777987603081-4086": {
+    "payload": {
+      "requestId": "req-1777987603081-4086",
+      "robotCode": "RB001",
+      "schemaVersion": "1.1",
+      "accepted": false,
+      "code": "AUTH_FAILED",
+      "message": "Invalid operator token.",
+      "action": "START",
+      "data": {
+        "state": "IDLE",
+        "message": "Auto-pick is idle.",
+        "running": false
+      },
+      "timestamp": "2026-05-05T13:26:44.028958Z"
+    },
+    "created_at": "2026-05-05T13:26:44.028958Z"
+  }
+}
